@@ -1,17 +1,18 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class b_18108 {
+public class b_10926 {
     public static void main(String[] args) throws IOException {
+        // joonas
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer tokenizer = new StringTokenizer(reader.readLine(), " ");
 
-        int year = Integer.parseInt(tokenizer.nextToken());
+        String input = tokenizer.nextToken();
 
-        System.out.println(year - 543);
+        System.out.println(input + "??!");
     }
 }

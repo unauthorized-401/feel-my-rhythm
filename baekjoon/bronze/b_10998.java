@@ -1,18 +1,19 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class b_10926 {
+public class b_10998 {
     public static void main(String[] args) throws IOException {
-        // joonas
+        // 1 2
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer tokenizer = new StringTokenizer(reader.readLine(), " ");
 
-        String input = tokenizer.nextToken();
+        int n1 = Integer.parseInt(tokenizer.nextToken());
+        int n2 = Integer.parseInt(tokenizer.nextToken());
 
-        System.out.println(input + "??!");
+        System.out.println(n1 * n2);
     }
 }
