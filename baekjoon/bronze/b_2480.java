@@ -1,11 +1,11 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class b_2480 {
     public static void main(String[] args) throws IOException {
         // 3 3 6
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
