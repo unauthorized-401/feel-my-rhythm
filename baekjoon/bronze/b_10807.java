@@ -1,8 +1,8 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.*;
 
-public class Main {
+public class b_10807 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -11,15 +11,17 @@ public class Main {
         String stringNumbers = reader.readLine();
         int target = Integer.parseInt(reader.readLine());
 
-        int[] array = new int[100];
-        String[] numbers = stringNumbers.split(" ");
+        // index: 0 1 2 3 ... 100 101 102 ... 199 200
+        // value: -100 -99 -98 -97 ... 0 1 2 ... 99 100
+        int[] array = new int[201];
 
+        String[] numbers = stringNumbers.split(" ");
         for (String number : numbers) {
             int num = Integer.parseInt(number);
-            array[num - 1] += 1;
+            array[num + 100] += 1;
         }
 
-        writer.write(array[target-1] + "\n");
+        writer.write(array[target+100] + "\n");
 
         reader.close();
         writer.flush();

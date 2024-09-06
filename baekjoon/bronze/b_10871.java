@@ -1,11 +1,11 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main {
+public class b_10871 {
     public static void main(String[] args) throws IOException {
         //10 5
         //1 10 4 9 2 3 8 5 7 6
