@@ -1,8 +1,8 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.*;
 
-public class Main {
+public class b_5597 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
