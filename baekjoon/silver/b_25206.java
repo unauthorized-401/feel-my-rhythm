@@ -1,10 +1,10 @@
-package baekjoon;
+package baekjoon.silver;
 
 import java.io.*;
 import java.util.Objects;
 import java.util.StringTokenizer;
 
-public class Main {
+public class b_25206 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
