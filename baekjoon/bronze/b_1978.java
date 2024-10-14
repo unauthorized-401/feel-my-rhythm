@@ -1,34 +1,43 @@
 package baekjoon.bronze;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class b_1978 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        while (true) {
-            int n = Integer.parseInt(reader.readLine());
-            if (n == -1) break;
+        int n = Integer.parseInt(reader.readLine());
+        StringTokenizer token = new StringTokenizer(reader.readLine(), " ");
+        int count = 0;
 
-            int sum = 1;
-            String sentence = n + " = 1";
-
-            // 자신을 제외한
-            for (int i = 2; i < n; i++) {
-                if (n % i == 0) {
-                    sum += i;
-                    sentence = sentence.concat(" + " + i);
+        // 1000 이하 소수
+        List<Integer> primes = new ArrayList<>(List.of(2, 3, 5, 7));
+        for (int i = 7; i < 1000; i+=2) {
+            boolean flag = false;
+            for (Integer prime : primes) {
+                if (i % prime == 0) {
+                    flag = true;
+                    break;
                 }
             }
-
-            // 완전수
-            if (sum == n) {
-                writer.write(sentence + "\n");
-            } else {
-                writer.write(n + " is NOT perfect." + "\n");
+            if (!flag) {
+                primes.add(i);
             }
         }
+
+        for (int i = 0; i < n; i++) {
+            int target = Integer.parseInt(token.nextToken());
+
+            if (primes.contains(target)) {
+                count += 1;
+            }
+        }
+
+        writer.write(count + "\n");
 
         reader.close();
         writer.flush();

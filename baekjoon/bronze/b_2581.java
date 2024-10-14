@@ -1,10 +1,10 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class b_2581 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
