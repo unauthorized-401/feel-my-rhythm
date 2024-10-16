@@ -1,19 +1,16 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.*;
-import java.util.StringTokenizer;
 
-public class Main {
+public class b_27323 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer token;
 
-        for (int i = 0; i < 3; i++) {
-            token = new StringTokenizer(reader.readLine(), " ");
-        }
+        int a = Integer.parseInt(reader.readLine());
+        int b = Integer.parseInt(reader.readLine());
 
-        writer.write(distance + "\n");
+        writer.write(a * b + "\n");
 
         reader.close();
         writer.flush();
